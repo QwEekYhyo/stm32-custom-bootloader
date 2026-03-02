@@ -5,11 +5,9 @@ OUTPUT_FORMAT("elf32-littlearm", "elf32-littlearm", "elf32-littlearm")
 ENTRY(Reset_Handler)
 
 /* Memory sizes */
-FLASH_SIZE = 0x20000;   /* 128 KiB = 131,072 bytes */
+FLASH_SIZE = 0x4000;    /* 16 KiB = 16,384 bytes */
 SRAM_SIZE = 0x8000;     /* 32 KiB = 32,768 bytes */
-MIN_STACK_SIZE = 0x400; /* 1 KiB = 1024 bytes */
-/* I don't plan on calling malloc but whatever */
-MIN_HEAP_SIZE = 0x200   /* 512 bytes */
+MIN_STACK_SIZE = 0x800; /* 2 KiB = 2048 bytes */
 
 /* Define memory space */
 MEMORY
@@ -72,6 +70,7 @@ SECTIONS
         _edata = .;
     } >RAM AT> FLASH
 
+    /* Create a symbol with the Load Memory Address (Flash) of data */
     _sidata = LOADADDR(.data);
 
     /* Uninitialized data */
@@ -93,7 +92,6 @@ SECTIONS
         . = ALIGN(8);
         PROVIDE ( end = . );
         PROVIDE ( _end = . );
-        . = . + MIN_HEAP_SIZE;
         . = . + MIN_STACK_SIZE;
     } >RAM
 
