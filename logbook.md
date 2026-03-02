@@ -65,6 +65,7 @@ And much more
 - ![https://github.com/akospasztor/stm32-bootloader](https://github.com/akospasztor/stm32-bootloader)
 - ![https://github.com/STMicroelectronics/stm32l5-openbl-apps](https://github.com/STMicroelectronics/stm32l5-openbl-apps)
 - ![https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file](https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file)
+- ![https://blog.thea.codes/the-most-thoroughly-commented-linker-script/](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
 
 # Development
 ## Setup
@@ -92,5 +93,6 @@ $ arm-none-eabi-size test.elf
 ```
 This application uses almost 1KB which is less than 1% of our 128KB but as I said this is an extremely simple program so that was to be expected, so in prevision for a lot of cool features for my bootloader I thought that 16KiB would be a good amount to reserve. That leaves us with 112KiB for possible applications.
 
+## Step 0
 
-
+Step 0 is a preliminary step before step 1 because I just changed my mind and will first place the bootloader at the **start** of flash memory and the application right after.
