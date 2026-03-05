@@ -57,15 +57,15 @@ And much more
 
 # Links
 
-- ![https://www.codeproject.com/articles/Writing-A-Bootloader](https://www.codeproject.com/articles/Writing-A-Bootloader)
-- ![https://controllerstech.com/stm32-custom-bootloader-tutorial/](https://controllerstech.com/stm32-custom-bootloader-tutorial/)
-- ![https://interrupt.memfault.com/blog/how-to-write-a-bootloader-from-scratch](https://interrupt.memfault.com/blog/how-to-write-a-bootloader-from-scratch)
-- ![https://stackoverflow.com/questions/74840491/advice-on-writing-a-custom-bootloader-for-stm32-mcu](https://stackoverflow.com/questions/74840491/advice-on-writing-a-custom-bootloader-for-stm32-mcu)
-- ![https://www.reddit.com/r/embedded/comments/n3caxu/writing_bootloaders_for_microcontrollers/](https://www.reddit.com/r/embedded/comments/n3caxu/writing_bootloaders_for_microcontrollers/)
-- ![https://github.com/akospasztor/stm32-bootloader](https://github.com/akospasztor/stm32-bootloader)
-- ![https://github.com/STMicroelectronics/stm32l5-openbl-apps](https://github.com/STMicroelectronics/stm32l5-openbl-apps)
-- ![https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file](https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file)
-- ![https://blog.thea.codes/the-most-thoroughly-commented-linker-script/](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
+- [https://www.codeproject.com/articles/Writing-A-Bootloader](https://www.codeproject.com/articles/Writing-A-Bootloader)
+- [https://controllerstech.com/stm32-custom-bootloader-tutorial/](https://controllerstech.com/stm32-custom-bootloader-tutorial/)
+- [https://interrupt.memfault.com/blog/how-to-write-a-bootloader-from-scratch](https://interrupt.memfault.com/blog/how-to-write-a-bootloader-from-scratch)
+- [https://stackoverflow.com/questions/74840491/advice-on-writing-a-custom-bootloader-for-stm32-mcu](https://stackoverflow.com/questions/74840491/advice-on-writing-a-custom-bootloader-for-stm32-mcu)
+- [https://www.reddit.com/r/embedded/comments/n3caxu/writing_bootloaders_for_microcontrollers/](https://www.reddit.com/r/embedded/comments/n3caxu/writing_bootloaders_for_microcontrollers/)
+- [https://github.com/akospasztor/stm32-bootloader](https://github.com/akospasztor/stm32-bootloader)
+- [https://github.com/STMicroelectronics/stm32l5-openbl-apps](https://github.com/STMicroelectronics/stm32l5-openbl-apps)
+- [https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file](https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file)
+- [https://blog.thea.codes/the-most-thoroughly-commented-linker-script/](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
 
 # Development
 ## Setup
