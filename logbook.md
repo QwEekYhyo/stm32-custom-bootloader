@@ -66,6 +66,8 @@ And much more
 - [https://github.com/STMicroelectronics/stm32l5-openbl-apps](https://github.com/STMicroelectronics/stm32l5-openbl-apps)
 - [https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file](https://github.com/STMicroelectronics/stm32-mw-openbl?tab=readme-ov-file)
 - [https://blog.thea.codes/the-most-thoroughly-commented-linker-script/](https://blog.thea.codes/the-most-thoroughly-commented-linker-script/)
+- [https://ampheoelectronic.wordpress.com/2025/10/23/how-do-i-change-stack-pointer-in-stm32h743/](https://ampheoelectronic.wordpress.com/2025/10/23/how-do-i-change-stack-pointer-in-stm32h743/)
+- [https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html](https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html)
 
 # Development
 ## Setup

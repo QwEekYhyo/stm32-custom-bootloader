@@ -1,6 +1,6 @@
 .syntax unified
 .cpu cortex-m4
-.fpu softvfp    ; The G431KB has a single-precision floating-point unit
+.fpu softvfp    /* The G431KB has a single-precision floating-point unit */
 .thumb
 
 .global g_pfnVectors
@@ -24,39 +24,39 @@ Reset_Handler:
 
     /* Copy .data from FLASH to RAM */
 
-    ldr r0, =_sidata      ; source (Flash)
-    ldr r1, =_sdata       ; destination start (RAM)
-    ldr r2, =_edata       ; destination end (RAM)
+    ldr r0, =_sidata      /* source (Flash) */
+    ldr r1, =_sdata       /* destination start (RAM) */
+    ldr r2, =_edata       /* destination end (RAM) */
 
 copy_data:
-    cmp r1, r2            ; compare current RAM pointer with end of .data
-    bcc copy_word         ; if r1 < r2, branch to copy_word
-    b clear_bss_init      ; otherwise, finished copying -> clear .bss
+    cmp r1, r2            /* compare current RAM pointer with end of .data */
+    bcc copy_word         /* if r1 < r2, branch to copy_word */
+    b clear_bss_init      /* otherwise, finished copying -> clear .bss */
 
 copy_word:
-    ldr r3, [r0], #4      ; load 32-bit word from [r0] into r3, then offset r0 by 4
-    str r3, [r1], #4      ; store r3 into [r1], then offset r1 by 4
-    b copy_data           ; repeat the copy loop
+    ldr r3, [r0], #4      /* load 32-bit word from [r0] into r3, then offset r0 by 4 */
+    str r3, [r1], #4      /* store r3 into [r1], then offset r1 by 4 */
+    b copy_data           /* repeat the copy loop */
 
 clear_bss_init:
-    ldr r0, =_sbss        ; r0 = start address of .bss section in RAM
-    ldr r1, =_ebss        ; r1 = end address of .bss section in RAM
-    movs r2, #0           ; r2 = 0 (value used to zero memory)
+    ldr r0, =_sbss        /* r0 = start address of .bss section in RAM */
+    ldr r1, =_ebss        /* r1 = end address of .bss section in RAM */
+    movs r2, #0           /* r2 = 0 (value used to zero memory) */
 
 clear_loop:
-    cmp r0, r1            ; compare current .bss pointer with end
-    bcc clear_word        ; if r0 < r1, branch to clear_word
-    b call_main           ; otherwise, .bss fully cleared -> call main
+    cmp r0, r1            /* compare current .bss pointer with end */
+    bcc clear_word        /* if r0 < r1, branch to clear_word */
+    b call_main           /* otherwise, .bss fully cleared -> call main */
 
 clear_word:
-    str r2, [r0], #4      ; store 0 into [r0], then offset r0 by 4
-    b clear_loop          ; repeat zeroing loop
+    str r2, [r0], #4      /* store 0 into [r0], then offset r0 by 4 */
+    b clear_loop          /* repeat zeroing loop */
 
 call_main:
-    bl main               ; branch with link to main (stores return address in LR)
+    bl main               /* branch with link to main (stores return address in LR) */
 
 infinite_loop:
-    b infinite_loop       ; infinite loop if main ever returns
+    b infinite_loop       /* infinite loop if main ever returns */
 
 .size Reset_Handler, . - Reset_Handler
 
