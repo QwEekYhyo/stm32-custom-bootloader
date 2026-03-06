@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-#define APP_ADDRESS 0x08001000
+#define APP_ADDRESS 0x08004000
 
 typedef void (*entry_t)(void);
 

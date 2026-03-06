@@ -1,6 +1,6 @@
 CC = arm-none-eabi-gcc
 AS = arm-none-eabi-as
-CPU = -mcpu=cortex-m4 -mthumb -mfloat-abi=soft
+CPU = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
 LDFLAGS = -nostdlib -T bootloader/linker.ld
 SRC_C = bootloader/main.c
 SRC_S = bootloader/startup.s
